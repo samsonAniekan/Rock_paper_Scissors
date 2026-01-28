@@ -54,11 +54,16 @@ each time calling the number of rounds
 function playGame() {
   humanScore = 0;
   computerScore = 0;
-  for (let i = 0; i <= 5; i++) {
+  for (let i = 1; i <= 5; i++) {
     console.log(`---------Round${i}begins---------`);
     const humanSelection = getHumanChoice();
     const computerSelection = getComputeValues();
 
+    if (!humanSelection) {
+      console.log("Invalid Input Entered");
+      i--;
+      continue;
+    }
     console.log(
       `Human choose:${humanSelection}, Computer Choose: ${computerSelection}`,
     );
