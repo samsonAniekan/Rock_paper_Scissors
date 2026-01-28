@@ -46,6 +46,11 @@ function playgRound(humanChoice, computerChoice) {
   return `human score: ${humanScore} computer score: ${computerScore}`;
 }
 
+/**
+ the playGame function that 
+plays the game for five rounds 
+each time calling the number of rounds
+ **/
 function playGame() {
   humanScore = 0;
   computerScore = 0;
@@ -66,9 +71,9 @@ function playGame() {
   console.log(`Computer: ${computerScore}`);
 
   if (humanScore > computerScore) {
-    console.log("🏆Human wins the Game");
+    console.log("Human wins the Game");
   } else if (computerScore > humanScore) {
-    console.log("💻computer wins the Game");
+    console.log("computer wins the Game");
   } else {
     console.log("🤝its a tie game");
   }
